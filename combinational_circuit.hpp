@@ -51,8 +51,7 @@ public:
     /*
     Performs a half-adder operation on two bits.
 
-    Combines HALF_ADDER_SUM and HALF_ADDER_CARRY to produce both
-    sum and carry-out simultaneously.
+    Combines HALF_ADDER_SUM and HALF_ADDER_CARRY to produce both sum and carry-out simultaneously.
     */
     static constexpr HALF_ADDER_RESULT HALF_ADDER(const Bit& x, const Bit& y) noexcept;
 
@@ -95,8 +94,8 @@ public:
     /*
     Performs a half-subtractor operation on two bits.
 
-    Combines HALF_SUBTRACTOR_DIFFERENCE and HALF_SUBTRACTOR_BORROW to produce both
-    difference and borrow-out simultaneously.
+    Combines HALF_SUBTRACTOR_DIFFERENCE and HALF_SUBTRACTOR_BORROW to produce both difference and
+    borrow-out simultaneously.
     */
     static constexpr HALF_SUBTRACTOR_RESULT HALF_SUBTRACTOR(const Bit& x, const Bit& y) noexcept;
 
@@ -153,8 +152,7 @@ public:
     /*
     Performs a full-adder operation on three bits.
 
-    Combines FULL_ADDER_SUM and FULL_ADDER_CARRY to produce both
-    sum and carry-out simultaneously.
+    Combines FULL_ADDER_SUM and FULL_ADDER_CARRY to produce both sum and carry-out simultaneously.
     */
     static constexpr FULL_ADDER_RESULT FULL_ADDER(const Bit& x, const Bit& y, const Bit& c) noexcept;
 
@@ -211,8 +209,8 @@ public:
     /*
     Performs a full-subtractor operation on three bits.
 
-    Combines FULL_SUBTRACTOR_DIFFERENCE and FULL_SUBTRACTOR_BORROW to produce both
-    difference and borrow-out simultaneously.
+    Combines FULL_SUBTRACTOR_DIFFERENCE and FULL_SUBTRACTOR_BORROW to produce both difference and
+    borrow-out simultaneously.
     */
     static constexpr FULL_SUBTRACTOR_RESULT FULL_SUBTRACTOR(const Bit& x, const Bit& y, const Bit& b) noexcept;
 };
