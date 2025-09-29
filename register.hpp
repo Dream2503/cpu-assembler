@@ -2,8 +2,6 @@
 #include "bit.hpp"
 
 /*
-Register
-
 Represents a fixed-width collection of bits (ARCHITECTURE) and provides basic access, conversion,
 and utility functions for bitwise operations.
 
@@ -53,6 +51,7 @@ public:
     - T: Integral representation of the register.
     */
     template <typename T>
+    requires(sizeof(T) * 8 == ARCHITECTURE)
     constexpr operator T() const noexcept {
         T value = 0;
 
@@ -82,6 +81,18 @@ public:
             os << reg[ARCHITECTURE - i - 1];
         }
         return os;
+    }
+
+    constexpr Register& operator<<=(const uint8_t n) {
+        int8_t i;
+
+        for (i = ARCHITECTURE - n - 1; i >= 0; i--) {
+            bits[i + n] = bits[i];
+        }
+        for (i = n > ARCHITECTURE ? ARCHITECTURE - 1 : n - 1; i >= 0; i--) {
+            bits[i] = false;
+        }
+        return *this;
     }
 
     /*
