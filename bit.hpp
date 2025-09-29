@@ -2,15 +2,15 @@
 
 /*
 - This class represents a single-bit logical value (`0` or `1`).
-- It provides implementations of basic logic gate operations (NOT, AND, OR, XOR, etc.)
-  as operator overloads, modeling how digital circuits behave at the bit level.
+- It provides implementations of basic logic gate operations (NOT, AND, OR, XOR, etc.) as operator
+  overloads, modeling how digital circuits behave at the bit level.
 - Additional composite gates (XNOR, NAND, NOR) are also provided.
 
 Usage:
 - Each `Bit` object acts like a boolean but supports gate-like operators.
 - Functions return `Bit` values instead of `bool` to maintain composability in circuit modeling.
-- Useful for building combinational logic circuits, adders, subtractors, and higher-level
-  digital designs.
+- Useful for building combinational logic circuits, adders, subtractors, and higher-level digital
+  designs.
 */
 class Bit {
     bool x = false; // Internal boolean representation of the bit (0 = false, 1 = true)
